@@ -1,0 +1,23 @@
+main {
+  background-color: #fafafa;
+}
+.flex {
+  display: flex;
+}
+.main-icons {
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  background-color: #f0f2f5;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.main-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
