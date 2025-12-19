@@ -21,3 +21,12 @@
   font-size: 14px;
   color: #777;
 }
+.card__content {
+  width: 69%;
+}
+.card__header,
+.card__stats,
+.card__stat,
+.card__footer {
+  justify-content: space-between;
+}
