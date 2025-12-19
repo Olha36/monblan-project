@@ -10,6 +10,7 @@ function App() {
     <img src={logoDecoration} alt="logo decoration" className="logo-decoration" />
       <Header />
       <MainPage />
+     
     </>
   );
 }

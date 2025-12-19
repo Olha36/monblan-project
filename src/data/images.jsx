@@ -8,6 +8,14 @@ import img7 from "../assets/main-images-rows/7.png";
 import img8 from "../assets/main-images-rows/8.png";
 import img9 from "../assets/main-images-rows/like.png";
 import img10 from "../assets/main-images-rows/comment.png";
+import img11 from "../assets/column-data/1.png";
+import img12 from "../assets/column-data/2.png";
+import img13 from "../assets/column-data/3.png";
+import img14 from "../assets/column-data/4.png";
+import img15 from "../assets/column-data/5.png";
+import img16 from "../assets/column-data/6.png";
+import img17 from "../assets/column-data/7.png";
+import img18 from "../assets/column-data/8.png";
 
 export const imagesMap = {
   1: img1,
@@ -20,4 +28,12 @@ export const imagesMap = {
   8: img8,
   9: img9,
   10: img10,
+  11: img11,
+  12: img12,
+  13: img13,
+  14: img14,
+  15: img15,
+  16: img16,
+  17: img17,
+  18: img18,
 };

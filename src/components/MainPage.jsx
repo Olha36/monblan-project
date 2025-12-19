@@ -1,7 +1,8 @@
 import AppsIcon from "@mui/icons-material/Apps";
 import ListIcon from "@mui/icons-material/List";
-import '../css/main.css'
+import "../css/main.css";
 import CardsGrid from "./CardsGrid";
+import CardsColumn from "./CardsColumn";
 export default function MainPage() {
   return (
     <main>
@@ -11,6 +12,8 @@ export default function MainPage() {
         <ListIcon sx={{ color: "#3D8EDA" }} />
       </div>
       <CardsGrid />
+      <p>version 2</p>
+      <CardsColumn />
     </main>
   );
 }
