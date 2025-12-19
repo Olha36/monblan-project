@@ -21,3 +21,11 @@ main {
   gap: 10px;
   margin-bottom: 20px;
 }
+
+
+@media screen and (max-width: 525px) {
+  main {
+    background-color: #fff;
+  }
+  
+}
