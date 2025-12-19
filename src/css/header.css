@@ -4,6 +4,104 @@
 .header {
   align-items: center;
   justify-content: center;
-  gap: 100px;
-  padding-top: 33px;
+  gap: 320px;
+  padding: 33px 0;
+}
+
+.header-container__info {
+  align-items: center;
+  gap: 16px;
+}
+.header-container__info p:first-child {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: -1%;
+}
+
+.header-container__info p:nth-child(2) {
+  border: 1px solid #3d8eda;
+  padding: 6px 12px;
+  border-radius: 2px;
+  color: #3d8eda;
+  font-weight: 400;
+  font-size: 13px;
+}
+.header-container__profile-header {
+  gap: 17px;
+  margin: 16px 0;
+  font-weight: 700;
+  font-size: 14px;
+}
+.font-weight {
+  font-weight: 500;
+}
+
+.react-datepicker__input-container input {
+  border-radius: 4px 0 0 4px;
+  padding: 7px 0;
+  border: 1px solid #dedede;
+}
+.date-input__icons {
+  border: 1px solid #dedede;
+}
+.date-input__icons button {
+  border: none;
+}
+.date-input__icons,
+.date-input__icons button {
+  height: 100%;
+}
+.header-container__date-picker {
+  align-items: center;
+  gap: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    gap: 135px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .header-container__date-picker {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+    .header {
+        gap: 75px;
+    }
+}
+ @media screen and (max-width: 525px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 0;
+  }
+
+  .header img {
+    margin-bottom: 10px;
+    max-width: 80%;
+    height: auto;
+  }
+
+  .header-container {
+    width: 100%;
+    align-items: center;
+  }
+
+  .header-container__info,
+  .header-container__profile-header,
+  .header-container__date-picker {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .header-container__date-picker {
+    flex-direction: column;
+    gap: 5px;
+  }
 }

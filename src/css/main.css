@@ -1,0 +1,31 @@
+main {
+  background-color: #fafafa;
+}
+.flex {
+  display: flex;
+}
+.main-icons {
+  align-items: center;
+}
+
+main {
+  width: 100vw;
+  background-color: #f0f2f5;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.main-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 525px) {
+  main {
+    background-color: #fff;
+  }
+  
+}

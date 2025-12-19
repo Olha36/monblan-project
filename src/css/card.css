@@ -1,0 +1,32 @@
+.card__header,
+.card__footer {
+  display: flex;
+  align-items: center;
+}
+
+.card__stats {
+  display: flex;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.card__stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card__footer {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #777;
+}
+.card__content {
+  width: 69%;
+}
+.card__header,
+.card__stats,
+.card__stat,
+.card__footer {
+  justify-content: space-between;
+}
