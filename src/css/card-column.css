@@ -121,3 +121,11 @@ button {
     align-items: flex-start;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .card-column {
+    grid-template-columns: 60px 0.5fr 0.2fr 1fr;
+    gap: 35px;
+    margin: 5px 50px;
+  }
+}
