@@ -1,4 +1,6 @@
 import { forwardRef } from "react";
+import close from "../assets/close.png";
+import calendar from "../assets/calendar.png";
 
 const DateInput = forwardRef(({ value, onClear }, ref) => {
   return (
@@ -13,11 +15,11 @@ const DateInput = forwardRef(({ value, onClear }, ref) => {
               onClear();
             }}
           >
-            ✕
+            <img src={close} alt="close" />
           </button>
         )}
 
-        <span className="date-input__calendar">📅</span>
+        <img className="date-input__calendar" src={calendar} alt="calendar" />
       </div>
     </div>
   );
