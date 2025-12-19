@@ -1,26 +1,57 @@
-import { forwardRef } from "react";
+import React, { useState, useEffect } from "react";
+import { DemoItem } from "@mui/x-date-pickers/internals/demo";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
+import Box from "@mui/material/Box";
+import Alert from "@mui/material/Alert";
 
-const DateInput = forwardRef(({ value, onClear }, ref) => {
+export default function ClearableProp() {
+  const [cleared, setCleared] = useState(false);
+
+  useEffect(() => {
+    if (cleared) {
+      const timeout = setTimeout(() => {
+        setCleared(false);
+      }, 1500);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [cleared]);
+
   return (
-    <div className="date-input" ref={ref}>
-      <div className="date-input__icons">
-        {value !== undefined && (
-          <button
-            type="button"
-            className="date-input__clear"
-            onClick={(e) => {
-              e.stopPropagation();
-              onClear();
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <Box
+        sx={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          justifyContent: "center",
+          position: "relative",
+        }}
+      >
+        <DemoItem>
+          <DesktopDatePicker
+            sx={{ width: 260 }}
+            slotProps={{
+              field: {
+                clearable: true,
+                placeholder: "from",
+                onClear: () => setCleared(true),
+              },
             }}
+          />
+        </DemoItem>
+
+        {cleared && (
+          <Alert
+            sx={{ position: "absolute", bottom: 0, right: 0 }}
+            severity="success"
           >
-            ✕
-          </button>
+            Field cleared!
+          </Alert>
         )}
-
-        <span className="date-input__calendar">📅</span>
-      </div>
-    </div>
+      </Box>
+    </LocalizationProvider>
   );
-});
-
-export default DateInput;
+}
