@@ -1,12 +1,8 @@
 import logo from "../assets/logo-img.png";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import DateInput from "./DateInput";
-import { useState } from "react";
+import ClearableProp from "./DateInput";
 import "../css/header.css";
 export default function Header() {
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(new Date());
   return (
     <header className="flex header">
       <img src={logo} alt="logo" />
@@ -30,26 +26,11 @@ export default function Header() {
         <div className="header-container__date-picker flex">
           <p>Date</p>
           <div className="date-picker__box flex">
-            <DatePicker
-              selected={startDate}
-              onChange={(date) => setStartDate(date)}
-              placeholderText="from"
-              dateFormat="dd_MM_yyyy"
-              isClearable
-    
-            />
-
-            <DateInput value={startDate} onClear={() => setStartDate(null)} />
+          <ClearableProp />
           </div>
 
           <div className="date-picker__box flex">
-            <DatePicker
-              selected={endDate}
-              onChange={(date) => setEndDate(date)}
-              dateFormat="dd_MM_yyyy"
-            />
-
-            <DateInput value={endDate} onClear={() => setEndDate(null)} />
+           <ClearableProp />
           </div>
         </div>
       </div>
